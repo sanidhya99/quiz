@@ -1,0 +1,124 @@
+body{
+    margin:0;
+}
+
+#intro{
+    height: 100vh;
+    width: 100vw;
+    background-color: rgb(79, 4, 159);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items:center;
+    font-size: 10px;
+}
+#start1{
+    
+   font-size: 85px;
+   color: white;
+   font-family: 'Raleway', sans-serif; 
+}
+#start2{
+   font-size: 45px;
+    color: white;
+     font-family: 'Raleway', sans-serif; 
+     border: 1px solid white;
+     padding: 15px;
+     
+}
+#start2:hover{
+    background-color:white ;
+    color:black;
+}
+.qs{
+    height: 100vh;
+    width: 100vw;
+    background-color: rgb(79, 4, 159);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items:center;
+    font-size: 10px;
+}
+.question{
+    font-size: 85px;
+    color: white;
+    font-family: 'Raleway', sans-serif; 
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
+}
+.options{
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    flex-wrap: wrap;
+    
+
+}
+.opt{
+    color: white;
+    font-size: 30px;
+    letter-spacing: 7px;
+    margin-top: 25px;
+    border-radius: 20px;
+    /* display: block; */
+    padding: 15px;
+    width: 50vw;
+    display: flex;
+    justify-content: center;
+}
+.opt:hover{
+    border: 1px solid white;
+    border-radius: 20px;
+    background-color: white;
+    color: black;
+}
+#q1{
+    display: none;
+}
+#q2{
+    display: none;
+}
+#q3{
+    display: none;
+}
+#q4{
+    display: none;
+}
+#q5{
+    display: none;
+}
+#q6{
+    display: none;
+}
+#q7{
+    display: none;
+}
+#q8{
+    display: none;
+}
+#q9{
+    display: none;
+}
+#q10{
+    display: none;
+}
+#result{
+    display: none;
+
+}
+#declare{
+    
+    font-size: 85px;
+    color: white;
+    font-family: 'Raleway', sans-serif; 
+ }
+ #score{
+    font-size:100px;
+     color: white;
+      font-family: 'Raleway', sans-serif; 
+      
+      
+      
+ }

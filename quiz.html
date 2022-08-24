@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="quiz.css">
+    <title>C++ QUIZ</title>
+    <style>
+          @import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Merriweather+Sans:wght@800&family=Montserrat&family=Noto+Sans+JP&family=Oleo+Script+Swash+Caps&family=Raleway:wght@300;400&family=Roboto+Condensed:wght@700&family=Water+Brush&display=swap');
+    </style>
+</head>
+<body >
+    <div id="intro">
+        <div id="start1">Ready for the quiz?</div>
+        <div id="start2" onclick="q1()">Start</div>
+    </div>
+    <div id="q1" class="qs" class="display_none" >
+        <div class="question">Who invented C++?</div>
+        <div class="options">
+        <li class="opt" onclick="q2()"> Dennis Ritchie</li>
+        <li class="opt" onclick="q2()"> Ken Thompson</li>
+        <li class="opt" onclick="q2()"> Brian Karnighan</li>
+        <li class="opt" onclick="ans(),q2()" > Bjarne Stroustrup</li>
+    </div>
+  
+    </div>
+    <div id="q2" class="qs" class="display_none" >
+        <div class="question">What is C++?</div>
+        <div class="options">
+        <li class="opt" onclick="q3()"> C++ is an object oriented programming language</li>
+        <li class="opt" onclick="q3()"> C++ is a procedural programming language</li>
+        <li class="opt" onclick="ans(),q3()"> C++ supports both procedural and object oriented programming language</li>
+        <li class="opt" onclick="q3()" > C++ is a functional programming language</li>
+    </div>
+    </div>
+    <div id="q3" class="qs" class="display_none" >
+        <div class="question">Which is the correct syntax in C++?</div>
+        <div class="options">
+        <li class="opt" onclick="q4()"> #include[header-file-name]</li>
+        <li class="opt" onclick="q4()"> #include"header-file-name"</li>
+        <li class="opt" onclick="q4()"> #include< header-file-name.h></li>
+        <li class="opt" onclick="ans(),q4()" > #include< header-file-name></li>
+    </div>
+    </div>
+    <div id="q4" class="qs" class="display_none" >
+        <div class="question">Which is used for comments in C++?</div>
+        <div class="options">
+        <li class="opt" onclick="ans(),q5()"> /*comment*/</li>
+        <li class="opt" onclick="q5()"> //comment*/</li>
+        <li class="opt" onclick="q5()"> //comment</li>
+        <li class="opt" onclick="q5()" >both //comment and /*comment*/ </li>
+    </div>
+    </div>
+    <div id="q5" class="qs" class="display_none" >
+        <div class="question">Which user-defined header file extension used in C++?</div>
+        <div class="options">
+        <li class="opt" onclick="q6()">hg</li>
+        <li class="opt" onclick="q6()"> cpp</li>
+        <li class="opt" onclick="q6(),ans()"> h</li>
+        <li class="opt" onclick="q6()" >hf </li>
+    </div>
+    </div>
+    <div id="q6" class="qs" class="display_none" >
+        <div class="question">Which of the following is a correct identifier in C++?</div>
+        <div class="options">
+        <li class="opt" onclick="q7()">VAR_1234</li>
+        <li class="opt" onclick="q7()">$var_name</li>
+        <li class="opt" onclick="q7()"> 7VARNAME</li>
+        <li class="opt" onclick="q7(),ans()" >7var_name </li>
+    </div>
+    </div>
+    <div id="q7" class="qs" class="display_none" >
+        <div class="question">Which of the following is not a type of constructor in C++?</div>
+        <div class="options">
+        <li class="opt" onclick="q8()">Default Constructor</li>
+        <li class="opt" onclick="q8()">Parametarized Constructor</li>
+        <li class="opt" onclick="q8(),ans()">Copy Constructor</li>
+        <li class="opt" onclick="q8()" >Friend Constructor </li>
+    </div>
+    </div>
+    <div id="q8" class="qs" class="display_none" >
+        <div class="question">Which of the following approach is used by C++?</div>
+        <div class="options">
+        <li class="opt" onclick="q9()">Left-Right</li>
+        <li class="opt" onclick="q9()">Right-Left</li>
+        <li class="opt" onclick="q9(),ans()">Bottom-Up</li>
+        <li class="opt" onclick="q9()" >Top-Down </li>
+    </div>
+    </div>
+    <div id="q9" class="qs" class="display_none" >
+        <div class="question">Constants in C++ are also known as?</div>
+        <div class="options">
+        <li class="opt" onclick="q10()">Preprocessors</li>
+        <li class="opt" onclick="q10(),ans()">Literals</li>
+        <li class="opt" onclick="q10()">Const</li>
+        <li class="opt" onclick="q10()" >None</li>
+    </div>
+    </div>
+    <div id="q10" class="qs" class="display_none" >
+        <div class="question">What a C++ class hold?</div>
+        <div class="options">
+        <li class="opt" onclick="result()">Functions</li>
+        <li class="opt" onclick="result()">Data</li>
+        <li class="opt" onclick="result()">Arrays</li>
+        <li class="opt" onclick="ans(),result()" >Both Functions and Arrays</li>
+    </div>
+    </div>
+    <div class="qs" id="result">
+        <div id="declare">Your Score Out Of 10 is</div>
+        <div id="score" ></div>
+    </div>
+    <script>
+        
+        // console.log("hello");
+        function q1(){
+            document.getElementById('intro').style.display="none";
+            document.getElementById('q1').style.display="flex";
+        }
+        function q2(){
+            document.getElementById('q1').style.display="none";
+            document.getElementById('q2').style.display="flex";
+        }
+        function q3(){
+            document.getElementById('q2').style.display="none";
+            document.getElementById('q3').style.display="flex";
+        }
+        function q4(){
+            document.getElementById('q3').style.display="none";
+            document.getElementById('q4').style.display="flex";
+        }
+        function q5(){
+            document.getElementById('q4').style.display="none";
+            document.getElementById('q5').style.display="flex";
+        }
+        function q6(){
+            document.getElementById('q5').style.display="none";
+            document.getElementById('q6').style.display="flex";
+        }
+        function q7(){
+            document.getElementById('q6').style.display="none";
+            document.getElementById('q7').style.display="flex";
+        }
+        function q8(){
+            document.getElementById('q7').style.display="none";
+            document.getElementById('q8').style.display="flex";
+        }
+        function q9(){
+            document.getElementById('q8').style.display="none";
+            document.getElementById('q9').style.display="flex";
+        }
+        function q10(){
+            document.getElementById('q9').style.display="none";
+            document.getElementById('q10').style.display="flex";
+        }
+        let count=0;
+        function ans(){
+            count=count+1;
+            console.log(count);
+        }
+        function result(){
+            document.getElementById('q10').style.display="none";
+            document.getElementById('result').style.display="flex";
+            document.getElementById('score').innerHTML=count;
+
+        }
+    </script>
+</body>
+</html>
