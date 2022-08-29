@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,163 +8,334 @@
     <link rel="stylesheet" href="quiz.css">
     <title>C++ QUIZ</title>
     <style>
-          @import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Merriweather+Sans:wght@800&family=Montserrat&family=Noto+Sans+JP&family=Oleo+Script+Swash+Caps&family=Raleway:wght@300;400&family=Roboto+Condensed:wght@700&family=Water+Brush&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Merriweather+Sans:wght@800&family=Montserrat&family=Noto+Sans+JP&family=Oleo+Script+Swash+Caps&family=Raleway:wght@300;400&family=Roboto+Condensed:wght@700&family=Water+Brush&display=swap');
     </style>
 </head>
-<body >
+
+<body>
+    <div id="time">
+        <h1>For how much time you want to take quiz?</h1>
+        <div id="options">
+            <div class="opti" onclick="t1(),intro()">1 minutes</div>
+            <div class="opti" onclick="t2(),intro()">2 minutes</div>
+            <div class="opti" onclick="t3(),intro()">3 minutes</div>
+            <div class="opti" onclick="t4(),intro()">4 minutes</div>
+            <div class="opti" onclick="t5(),intro()">5 minutes</div>
+            <div class="opti" onclick="t6(),intro()">6 minutes</div>
+            <div class="opti" onclick="t7(),intro()">7 minutes</div>
+            <div class="opti" onclick="t8(),intro()">8 minutes</div>
+            <div class="opti" onclick="t9(),intro()">9 minutes</div>
+            <div class="opti" onclick="t10(),intro()">10 minutes</div>
+        </div>
+    </div>
     <div id="intro">
         <div id="start1">Ready for the quiz?</div>
-        <div id="start2" onclick="q1()">Start</div>
+        <div id="start2" onclick="greet()">Start</div>
+        <div id="instructions" onclick="brief()">
+            <img src="qm.jpg" alt="" id="inst_img">
+        </div>
+
+        <div id="instr">
+            1. In Quiz there will be 10 questions <br>2.There will be 4 options for each question <br>3. You will get
+            time specified by you in the last page as the total time <br> 4. After that it will automatically submit.
+        </div>
     </div>
-    <div id="q1" class="qs" class="display_none" >
+    <div id="greet" >
+        <h1>
+            ALL THE BEST!
+        </h1>
+    </div>
+    <div id="q1" class="qs" class="display_none">
         <div class="question">Who invented C++?</div>
         <div class="options">
-        <li class="opt" onclick="q2()"> Dennis Ritchie</li>
-        <li class="opt" onclick="q2()"> Ken Thompson</li>
-        <li class="opt" onclick="q2()"> Brian Karnighan</li>
-        <li class="opt" onclick="ans(),q2()" > Bjarne Stroustrup</li>
+            <li class="opt" onclick="q2()"> Dennis Ritchie</li>
+            <li class="opt" onclick="q2()"> Ken Thompson</li>
+            <li class="opt" onclick="q2()"> Brian Karnighan</li>
+            <li class="opt" onclick="ans(),q2()"> Bjarne Stroustrup</li>
+        </div>
     </div>
-  
-    </div>
-    <div id="q2" class="qs" class="display_none" >
+
+
+
+    <div id="q2" class="qs" class="display_none">
+
         <div class="question">What is C++?</div>
         <div class="options">
-        <li class="opt" onclick="q3()"> C++ is an object oriented programming language</li>
-        <li class="opt" onclick="q3()"> C++ is a procedural programming language</li>
-        <li class="opt" onclick="ans(),q3()"> C++ supports both procedural and object oriented programming language</li>
-        <li class="opt" onclick="q3()" > C++ is a functional programming language</li>
+            <li class="opt" onclick="q3()"> C++ is an object oriented programming language</li>
+            <li class="opt" onclick="q3()"> C++ is a procedural programming language</li>
+            <li class="opt" onclick="ans(),q3()"> C++ supports both procedural and object oriented programming language
+            </li>
+            <li class="opt" onclick="q3()"> C++ is a functional programming language</li>
+        </div>
     </div>
-    </div>
-    <div id="q3" class="qs" class="display_none" >
+    <div id="q3" class="qs" class="display_none">
+
         <div class="question">Which is the correct syntax in C++?</div>
         <div class="options">
-        <li class="opt" onclick="q4()"> #include[header-file-name]</li>
-        <li class="opt" onclick="q4()"> #include"header-file-name"</li>
-        <li class="opt" onclick="q4()"> #include< header-file-name.h></li>
-        <li class="opt" onclick="ans(),q4()" > #include< header-file-name></li>
+            <li class="opt" onclick="q4()"> #include[header-file-name]</li>
+            <li class="opt" onclick="q4()"> #include"header-file-name"</li>
+            <li class="opt" onclick="q4()"> #include< header-file-name.h>
+            </li>
+            <li class="opt" onclick="ans(),q4()"> #include< header-file-name>
+            </li>
+        </div>
     </div>
-    </div>
-    <div id="q4" class="qs" class="display_none" >
+    <div id="q4" class="qs" class="display_none">
+
         <div class="question">Which is used for comments in C++?</div>
         <div class="options">
-        <li class="opt" onclick="ans(),q5()"> /*comment*/</li>
-        <li class="opt" onclick="q5()"> //comment*/</li>
-        <li class="opt" onclick="q5()"> //comment</li>
-        <li class="opt" onclick="q5()" >both //comment and /*comment*/ </li>
+            <li class="opt" onclick="ans(),q5()"> /*comment*/</li>
+            <li class="opt" onclick="q5()"> //comment*/</li>
+            <li class="opt" onclick="q5()"> //comment</li>
+            <li class="opt" onclick="q5()">both //comment and /*comment*/ </li>
+        </div>
     </div>
-    </div>
-    <div id="q5" class="qs" class="display_none" >
+    <div id="q5" class="qs" class="display_none">
+
         <div class="question">Which user-defined header file extension used in C++?</div>
         <div class="options">
-        <li class="opt" onclick="q6()">hg</li>
-        <li class="opt" onclick="q6()"> cpp</li>
-        <li class="opt" onclick="q6(),ans()"> h</li>
-        <li class="opt" onclick="q6()" >hf </li>
+            <li class="opt" onclick="q6()">hg</li>
+            <li class="opt" onclick="q6()"> cpp</li>
+            <li class="opt" onclick="q6(),ans()"> h</li>
+            <li class="opt" onclick="q6()">hf </li>
+        </div>
     </div>
-    </div>
-    <div id="q6" class="qs" class="display_none" >
+    <div id="q6" class="qs" class="display_none">
+
         <div class="question">Which of the following is a correct identifier in C++?</div>
         <div class="options">
-        <li class="opt" onclick="q7()">VAR_1234</li>
-        <li class="opt" onclick="q7()">$var_name</li>
-        <li class="opt" onclick="q7()"> 7VARNAME</li>
-        <li class="opt" onclick="q7(),ans()" >7var_name </li>
+            <li class="opt" onclick="q7()">VAR_1234</li>
+            <li class="opt" onclick="q7()">$var_name</li>
+            <li class="opt" onclick="q7()"> 7VARNAME</li>
+            <li class="opt" onclick="q7(),ans()">7var_name </li>
+        </div>
     </div>
-    </div>
-    <div id="q7" class="qs" class="display_none" >
+    <div id="q7" class="qs" class="display_none">
+
         <div class="question">Which of the following is not a type of constructor in C++?</div>
         <div class="options">
-        <li class="opt" onclick="q8()">Default Constructor</li>
-        <li class="opt" onclick="q8()">Parametarized Constructor</li>
-        <li class="opt" onclick="q8(),ans()">Copy Constructor</li>
-        <li class="opt" onclick="q8()" >Friend Constructor </li>
+            <li class="opt" onclick="q8()">Default Constructor</li>
+            <li class="opt" onclick="q8()">Parametarized Constructor</li>
+            <li class="opt" onclick="q8(),ans()">Copy Constructor</li>
+            <li class="opt" onclick="q8()">Friend Constructor </li>
+        </div>
     </div>
-    </div>
-    <div id="q8" class="qs" class="display_none" >
+    <div id="q8" class="qs" class="display_none">
+
         <div class="question">Which of the following approach is used by C++?</div>
         <div class="options">
-        <li class="opt" onclick="q9()">Left-Right</li>
-        <li class="opt" onclick="q9()">Right-Left</li>
-        <li class="opt" onclick="q9(),ans()">Bottom-Up</li>
-        <li class="opt" onclick="q9()" >Top-Down </li>
+            <li class="opt" onclick="q9()">Left-Right</li>
+            <li class="opt" onclick="q9()">Right-Left</li>
+            <li class="opt" onclick="q9(),ans()">Bottom-Up</li>
+            <li class="opt" onclick="q9()">Top-Down </li>
+        </div>
     </div>
-    </div>
-    <div id="q9" class="qs" class="display_none" >
+    <div id="q9" class="qs" class="display_none">
+
         <div class="question">Constants in C++ are also known as?</div>
         <div class="options">
-        <li class="opt" onclick="q10()">Preprocessors</li>
-        <li class="opt" onclick="q10(),ans()">Literals</li>
-        <li class="opt" onclick="q10()">Const</li>
-        <li class="opt" onclick="q10()" >None</li>
+            <li class="opt" onclick="q10()">Preprocessors</li>
+            <li class="opt" onclick="q10(),ans()">Literals</li>
+            <li class="opt" onclick="q10()">Const</li>
+            <li class="opt" onclick="q10()">None</li>
+        </div>
     </div>
-    </div>
-    <div id="q10" class="qs" class="display_none" >
+    <div id="q10" class="qs" class="display_none">
+
         <div class="question">What a C++ class hold?</div>
         <div class="options">
-        <li class="opt" onclick="result()">Functions</li>
-        <li class="opt" onclick="result()">Data</li>
-        <li class="opt" onclick="result()">Arrays</li>
-        <li class="opt" onclick="ans(),result()" >Both Functions and Arrays</li>
-    </div>
+            <li class="opt" onclick="result()">Functions</li>
+            <li class="opt" onclick="result()">Data</li>
+            <li class="opt" onclick="result()">Arrays</li>
+            <li class="opt" onclick="ans(),result()">Both Functions and Arrays</li>
+        </div>
     </div>
     <div class="qs" id="result">
         <div id="declare">Your Score Out Of 10 is</div>
-        <div id="score" ></div>
+        <div id="score"></div>
+        <div id="rxn"></div>
     </div>
-    <script>
-        
-        // console.log("hello");
-        function q1(){
-            document.getElementById('intro').style.display="none";
-            document.getElementById('q1').style.display="flex";
-        }
-        function q2(){
-            document.getElementById('q1').style.display="none";
-            document.getElementById('q2').style.display="flex";
-        }
-        function q3(){
-            document.getElementById('q2').style.display="none";
-            document.getElementById('q3').style.display="flex";
-        }
-        function q4(){
-            document.getElementById('q3').style.display="none";
-            document.getElementById('q4').style.display="flex";
-        }
-        function q5(){
-            document.getElementById('q4').style.display="none";
-            document.getElementById('q5').style.display="flex";
-        }
-        function q6(){
-            document.getElementById('q5').style.display="none";
-            document.getElementById('q6').style.display="flex";
-        }
-        function q7(){
-            document.getElementById('q6').style.display="none";
-            document.getElementById('q7').style.display="flex";
-        }
-        function q8(){
-            document.getElementById('q7').style.display="none";
-            document.getElementById('q8').style.display="flex";
-        }
-        function q9(){
-            document.getElementById('q8').style.display="none";
-            document.getElementById('q9').style.display="flex";
-        }
-        function q10(){
-            document.getElementById('q9').style.display="none";
-            document.getElementById('q10').style.display="flex";
-        }
-        let count=0;
-        function ans(){
-            count=count+1;
-            console.log(count);
-        }
-        function result(){
-            document.getElementById('q10').style.display="none";
-            document.getElementById('result').style.display="flex";
-            document.getElementById('score').innerHTML=count;
 
+    <script>
+        let flag;
+        function t1() {
+            flag = (1 * 60 * 1000);
+            console.log(flag);
+        }
+        function t2() {
+            flag = (2 * 60 * 1000);
+        }
+        function t3() {
+            flag = (3 * 60 * 1000);
+        }
+        function t4() {
+            flag = (4 * 60 * 1000);
+        }
+        function t5() {
+            flag = (5 * 60 * 1000);
+        }
+        function t6() {
+            flag = (6 * 60 * 1000);
+        }
+        function t7() {
+            flag = (7 * 60 * 1000);
+        }
+        function t8() {
+            flag = (8 * 60 * 1000);
+        }
+        function t9() {
+            flag = (9 * 60 * 1000);
+        }
+        function t10() {
+            flag = (10 * 60 * 1000);
+        }
+        //   function auto(){
+        // setTimeout(submit(),flag);
+        //   }
+        function submit() {
+            document.getElementById('time').style.display = "none";
+            document.getElementById('intro').style.display = "none";
+            document.getElementById('q1').style.display = "none";
+            document.getElementById('q2').style.display = "none";
+            document.getElementById('q3').style.display = "none";
+            document.getElementById('q4').style.display = "none";
+            document.getElementById('q5').style.display = "none";
+            document.getElementById('q6').style.display = "none";
+            document.getElementById('q7').style.display = "none";
+            document.getElementById('q8').style.display = "none";
+            document.getElementById('q9').style.display = "none";
+            document.getElementById('q10').style.display = "none";
+            document.getElementById('score').innerHTML = count;
+            document.getElementById('result').style.display = "flex";
+            if(count>=7){
+                document.getElementById('rxn').innerHTML=con;
+            }
+            else if(count==5 || count==6){
+                 document.getElementById('rxn').innerHTML=keep;
+            }
+            else if(count<5){
+                 document.getElementById('rxn').innerHTML=oop;
+            }
+        }
+        // console.log("hello");
+        let inst = document.getElementById('instr');
+        function brief() {
+            if (inst.style.display == "none") {
+                inst.style.display = "block";
+            }
+            else {
+                inst.style.display = "none";
+            }
+
+        }
+        function intro() {
+            document.getElementById('time').style.display = "none";
+            document.getElementById('intro').style.display = "flex";
+        }
+        function greet() {
+            document.getElementById('intro').style.display = "none";
+            document.getElementById('greet').style.display = "flex";
+            setTimeout(q1,3000);
+        }
+        function q1() {
+            setTimeout(submit, flag);
+            document.getElementById('greet').style.display = "none";
+            document.getElementById('q1').style.display = "flex";
+        }
+        function q2() {
+            document.getElementById('q1').style.display = "none";
+            document.getElementById('q2').style.display = "flex";
+        }
+        function q3() {
+            document.getElementById('q2').style.display = "none";
+            document.getElementById('q3').style.display = "flex";
+        }
+        function q4() {
+            document.getElementById('q3').style.display = "none";
+            document.getElementById('q4').style.display = "flex";
+        }
+        function q5() {
+            document.getElementById('q4').style.display = "none";
+            document.getElementById('q5').style.display = "flex";
+        }
+        function q6() {
+            document.getElementById('q5').style.display = "none";
+            document.getElementById('q6').style.display = "flex";
+        }
+        function q7() {
+            document.getElementById('q6').style.display = "none";
+            document.getElementById('q7').style.display = "flex";
+        }
+        function q8() {
+            document.getElementById('q7').style.display = "none";
+            document.getElementById('q8').style.display = "flex";
+        }
+        function q9() {
+            document.getElementById('q8').style.display = "none";
+            document.getElementById('q9').style.display = "flex";
+        }
+        function q10() {
+            document.getElementById('q9').style.display = "none";
+            document.getElementById('q10').style.display = "flex";
+        }
+        let count = 0;
+        function ans() {
+            count = count + 1;
+            console.log(count);
+        } 
+        let con="Congratulations!";
+        let keep="You Can Do Better!Keep it up!";
+        let oop="Oops!Better luck next time!";
+        function result() {
+            document.getElementById('q10').style.display = "none";
+            document.getElementById('result').style.display = "flex";
+            document.getElementById('score').innerHTML = count;
+            
+            if(count>=7){
+                document.getElementById('rxn').innerHTML=con;
+            }
+            else if(count==5 || count==6){
+                 document.getElementById('rxn').innerHTML=keep;
+            }
+            else if(count<5){
+                 document.getElementById('rxn').innerHTML=oop;
+            }
+
+        }
+        let [milliseconds, second, minute,] = [0, 0, 0];
+        let timerRef = document.querySelector('.mainTime');
+        let int = null;
+
+        function timer() {
+            if (int !== null) {
+                clearInterval(int);
+            }
+            int = setInterval(mainTime, 10);
+        }
+
+
+
+        function mainTime() {
+            milliseconds += 10;
+            if (milliseconds == 1000) {
+                milliseconds = 0;
+                second++;
+                if (second == 60) {
+                    second = 0;
+                    minute++;
+                    if (minute == 60) {
+                        minute = 0;
+                    }
+                }
+            }
+
+            let m = minute < 10 ? "0" + minute : minute;
+            let s = second < 10 ? "0" + second : second;
+            let ms = milliseconds < 10 ? "00" + milliseconds : milliseconds < 100 ? "0" + milliseconds : milliseconds;
+
+            timerRef.innerHTML = ` ${m} : ${s} : ${ms}`;
         }
     </script>
 </body>
+
 </html>
