@@ -1,12 +1,59 @@
 body{
     margin:0;
 }
-
+#time{
+    height: 100vh;
+    /* margin: 0; */
+    width: 100vw;
+    background-color: rgb(79, 4, 159);
+     flex-direction: column;
+     display: flex;
+     justify-content: space-around;
+    align-items:center;
+    color: white;
+    font-size: 30px;
+    font-family: 'Raleway', sans-serif; 
+}
+#greet{
+    height: 100vh;
+    margin: 0;
+    width: 100vw;
+    background-color: rgb(79, 4, 159);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    font-size: 85px;
+    color: white;
+    font-family: 'Raleway', sans-serif; 
+}
+.opti{
+    width: 250px;
+    border-radius: 40px;
+    height: 50px;
+    margin: 20px;
+    border: 2px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.opti:hover{
+    background-color:white ;
+    color:black;
+}
+#options{
+    display: flex;
+    margin-left: 20px;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-items: center;
+    
+}
 #intro{
     height: 100vh;
     width: 100vw;
     background-color: rgb(79, 4, 159);
-    display: flex;
+    display: none;
     flex-direction: column;
     justify-content: space-around;
     align-items:center;
@@ -121,4 +168,65 @@ body{
       
       
       
+ }
+ #rxn{
+    font-size:85px;
+     color: white;
+      font-family: 'Raleway', sans-serif; 
+      
+      
+      
+ }
+ #mainstopwatch{
+    width: 400px;
+    height: 5vh;
+    margin:10px auto;
+    /* padding:60px 50px 10px; */
+    text-align:center;
+    font-size: 40px;
+    background: rgb(79, 4, 159);
+    /* box-shadow: 15px 15px 30px #afafaf,-15px -15px 30px #ffffff; */
+    border-radius:40px;
+    background: rgb(79, 4, 159);
+    /* box-shadow:6px -6px 8px #9d9d9d, -6px 6px 8px #ffffff; */
+  
+  }
+  #mainstopwatch span{
+    background: #c7e0f8;
+    color:#0776de;
+    padding:10px;
+    width:55px;
+    margin:3px;
+    display:inline-block;
+    background:#e0e0e0;
+    box-shadow:6px -6px 8px #9d9d9d, -6px 6px 8px #ffffff;
+  }
+ #instructions{
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    /* display: none; */
+ }
+ #instr{
+    border: 5px solid white;
+    background-color: black;
+    color: white;
+    border-radius: 30px;
+    padding: 15px;
+    box-sizing: border-box;
+    height: 340px;
+    line-height: 20px;
+    letter-spacing: 2px;
+    width: 220px;
+    position: absolute;
+    font-size: 20px;
+    display: none;
+    top: 45px;
+    right: 65px;
+ }
+ #inst_img{
+    height: 45px;
+    width: 45px;
  }
