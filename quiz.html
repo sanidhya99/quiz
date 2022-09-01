@@ -14,6 +14,7 @@
 
 <body>
     <div id="time">
+        <div class="mode" onclick="dark()">DARK/LIGHT</div>
         <h1>For how much time you want to take quiz?</h1>
         <div id="options">
             <div class="opti" onclick="t1(),intro()">1 minutes</div>
@@ -29,10 +30,11 @@
         </div>
     </div>
     <div id="intro">
+        <div class="mode" onclick="dark()">DARK/LIGHT</div>
         <div id="start1">Ready for the quiz?</div>
         <div id="start2" onclick="greet()">Start</div>
         <div id="instructions" onclick="brief()">
-            <img src="qm.jpg" alt="" id="inst_img">
+            <img src="qms.jpg" alt="" id="inst_img">
         </div>
 
         <div id="instr">
@@ -40,12 +42,13 @@
             time specified by you in the last page as the total time <br> 4. After that it will automatically submit.
         </div>
     </div>
-    <div id="greet" >
+    <div id="greet">
         <h1>
             ALL THE BEST!
         </h1>
     </div>
     <div id="q1" class="qs" class="display_none">
+        <!-- <div class="mode" onclick="dark()">DARK/LIGHT</div> -->
         <div class="question">Who invented C++?</div>
         <div class="options">
             <li class="opt" onclick="q2()"> Dennis Ritchie</li>
@@ -58,7 +61,7 @@
 
 
     <div id="q2" class="qs" class="display_none">
-
+        <!-- <div class="mode" onclick="dark()">DARK/LIGHT</div> -->
         <div class="question">What is C++?</div>
         <div class="options">
             <li class="opt" onclick="q3()"> C++ is an object oriented programming language</li>
@@ -69,7 +72,7 @@
         </div>
     </div>
     <div id="q3" class="qs" class="display_none">
-
+        <!-- <div class="mode" onclick="dark()">DARK/LIGHT</div> -->
         <div class="question">Which is the correct syntax in C++?</div>
         <div class="options">
             <li class="opt" onclick="q4()"> #include[header-file-name]</li>
@@ -81,7 +84,7 @@
         </div>
     </div>
     <div id="q4" class="qs" class="display_none">
-
+        <!-- <div class="mode" onclick="dark()">DARK/LIGHT</div> -->
         <div class="question">Which is used for comments in C++?</div>
         <div class="options">
             <li class="opt" onclick="ans(),q5()"> /*comment*/</li>
@@ -91,7 +94,7 @@
         </div>
     </div>
     <div id="q5" class="qs" class="display_none">
-
+        <!-- <div class="mode" onclick="dark()">DARK/LIGHT</div> -->
         <div class="question">Which user-defined header file extension used in C++?</div>
         <div class="options">
             <li class="opt" onclick="q6()">hg</li>
@@ -101,7 +104,7 @@
         </div>
     </div>
     <div id="q6" class="qs" class="display_none">
-
+        <!-- <div class="mode" onclick="dark()">DARK/LIGHT</div> -->
         <div class="question">Which of the following is a correct identifier in C++?</div>
         <div class="options">
             <li class="opt" onclick="q7()">VAR_1234</li>
@@ -111,7 +114,7 @@
         </div>
     </div>
     <div id="q7" class="qs" class="display_none">
-
+        <!-- <div class="mode" onclick="dark()">DARK/LIGHT</div> -->
         <div class="question">Which of the following is not a type of constructor in C++?</div>
         <div class="options">
             <li class="opt" onclick="q8()">Default Constructor</li>
@@ -121,7 +124,7 @@
         </div>
     </div>
     <div id="q8" class="qs" class="display_none">
-
+        <!-- <div class="mode" onclick="dark()">DARK/LIGHT</div> -->
         <div class="question">Which of the following approach is used by C++?</div>
         <div class="options">
             <li class="opt" onclick="q9()">Left-Right</li>
@@ -131,7 +134,7 @@
         </div>
     </div>
     <div id="q9" class="qs" class="display_none">
-
+        <!-- <div class="mode" onclick="dark()">DARK/LIGHT</div> -->
         <div class="question">Constants in C++ are also known as?</div>
         <div class="options">
             <li class="opt" onclick="q10()">Preprocessors</li>
@@ -141,7 +144,7 @@
         </div>
     </div>
     <div id="q10" class="qs" class="display_none">
-
+        <!-- <div class="mode" onclick="dark()">DARK/LIGHT</div> -->
         <div class="question">What a C++ class hold?</div>
         <div class="options">
             <li class="opt" onclick="result()">Functions</li>
@@ -151,12 +154,41 @@
         </div>
     </div>
     <div class="qs" id="result">
+        <div class="mode" onclick="dark()">DARK/LIGHT</div>
         <div id="declare">Your Score Out Of 10 is</div>
         <div id="score"></div>
         <div id="rxn"></div>
     </div>
 
     <script>
+        let d = document.getElementById('time');
+        let san=0;
+         let gr = document.getElementById('greet');
+         let inro = document.getElementById('intro');
+         let res = document.getElementById('result');
+         let qs = document.getElementsByClassName('qs');
+         
+
+        function dark() {
+            console.log("js");
+            if (san==1) {
+                d.style.backgroundColor = "rgb(79, 4, 159)";
+                san=0;
+                 gr.style.backgroundColor = "rgb(79, 4, 159)";
+                 res.style.backgroundColor = "rgb(79, 4, 159)";
+                 inro.style.backgroundColor = "rgb(79, 4, 159)";
+                 qs.style.backgroundColor = "rgb(79, 4, 159)";
+            }
+            else {
+                d.style.backgroundColor = "black";
+                san=1;
+                 gr.style.backgroundColor = "black";
+                 res.style.backgroundColor = "black";
+                 inro.style.backgroundColor = "black";
+                 qs.style.backgroundColor = "black";
+                 
+            }
+        }
         let flag;
         function t1() {
             flag = (1 * 60 * 1000);
@@ -207,14 +239,14 @@
             document.getElementById('q10').style.display = "none";
             document.getElementById('score').innerHTML = count;
             document.getElementById('result').style.display = "flex";
-            if(count>=7){
-                document.getElementById('rxn').innerHTML=con;
+            if (count >= 7) {
+                document.getElementById('rxn').innerHTML = con;
             }
-            else if(count==5 || count==6){
-                 document.getElementById('rxn').innerHTML=keep;
+            else if (count == 5 || count == 6) {
+                document.getElementById('rxn').innerHTML = keep;
             }
-            else if(count<5){
-                 document.getElementById('rxn').innerHTML=oop;
+            else if (count < 5) {
+                document.getElementById('rxn').innerHTML = oop;
             }
         }
         // console.log("hello");
@@ -235,10 +267,13 @@
         function greet() {
             document.getElementById('intro').style.display = "none";
             document.getElementById('greet').style.display = "flex";
-            setTimeout(q1,3000);
+            setTimeout(q1, 3000);
         }
         function q1() {
             setTimeout(submit, flag);
+            if(san==1){
+                alert("You can give quiz only in light mode!");
+            }
             document.getElementById('greet').style.display = "none";
             document.getElementById('q1').style.display = "flex";
         }
@@ -282,23 +317,23 @@
         function ans() {
             count = count + 1;
             console.log(count);
-        } 
-        let con="Congratulations!";
-        let keep="You Can Do Better!Keep it up!";
-        let oop="Oops!Better luck next time!";
+        }
+        let con = "Congratulations!";
+        let keep = "You Can Do Better!Keep it up!";
+        let oop = "Oops!Better luck next time!";
         function result() {
             document.getElementById('q10').style.display = "none";
             document.getElementById('result').style.display = "flex";
             document.getElementById('score').innerHTML = count;
-            
-            if(count>=7){
-                document.getElementById('rxn').innerHTML=con;
+
+            if (count >= 7) {
+                document.getElementById('rxn').innerHTML = con;
             }
-            else if(count==5 || count==6){
-                 document.getElementById('rxn').innerHTML=keep;
+            else if (count == 5 || count == 6) {
+                document.getElementById('rxn').innerHTML = keep;
             }
-            else if(count<5){
-                 document.getElementById('rxn').innerHTML=oop;
+            else if (count < 5) {
+                document.getElementById('rxn').innerHTML = oop;
             }
 
         }
